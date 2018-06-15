@@ -125,7 +125,7 @@ module.exports = function(botkit) {
                     final_thread: convo.state.thread,
                     bot_type: convo.bot.type,
                 };
-                statsAPI(bot, {
+                statsAPI(convo.bot, {
                     method: 'post',
                     form: data,
                 }, message);
