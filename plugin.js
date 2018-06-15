@@ -204,7 +204,6 @@ module.exports = function(botkit) {
                 stats_body.channel = options.form.channel;
                 stats_body.user = options.form.user;
                 stats_body.type = options.form.type;
-                stats_body.time = now;
                 stats_body.meta = {};
                 stats_body.meta.user = options.form.user;
                 stats_body.meta.channel = options.form.channel;
