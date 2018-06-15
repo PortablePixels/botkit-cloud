@@ -128,7 +128,7 @@ module.exports = function(botkit) {
                 statsAPI(convo.bot, {
                     method: 'post',
                     form: data,
-                }, message);
+                });
               }
               next();
             }],
