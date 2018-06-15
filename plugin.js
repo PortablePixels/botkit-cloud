@@ -111,7 +111,7 @@ module.exports = function(botkit) {
 
         },
         middleware: {
-            afterScript: function(convo, next) {
+            afterScript: [function(convo, next) {
               if (!botkit.config.stats_optout) {
                 var data = {
                     user: md5(convo.context.user),
@@ -127,9 +127,9 @@ module.exports = function(botkit) {
                     method: 'post',
                     form: data,
                 }, message);
-                next();
               }
-            },
+              next();
+            }],
             understand: [
                 function(bot, message, response, next) {
                     // pass it through the ol' Botkit Studio trigger API
