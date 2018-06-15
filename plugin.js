@@ -168,7 +168,7 @@ module.exports = function(botkit) {
 
 
         function statsAPI(bot, options, message) {
-            var _STUDIO_STATS_API = controller.config.studio_stats_uri || 'https://stats.botkit.ai';
+            var _STUDIO_STATS_API = botkit.config.studio_stats_uri || 'https://stats.botkit.ai';
             options.uri = _STUDIO_STATS_API + '/api/v1/stats';
 
             return new Promise(function(resolve, reject) {
