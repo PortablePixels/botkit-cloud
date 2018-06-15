@@ -1,4 +1,6 @@
 var debug = require('debug')('botkit:remote_triggers');
+var md5 = require('md5');
+
 var handlers = {}
 
 module.exports = function(botkit) {
